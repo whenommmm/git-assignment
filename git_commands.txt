@@ -1,0 +1,60 @@
+GIT COMMANDS USED IN THIS ASSIGNMENT
+====================================
+
+mkdir git-assignment && cd git-assignment
+    Creates the project folder and moves into it.
+
+git init -b main
+    Initializes an empty Git repository with "main" as the default branch.
+
+git status --short
+    Shows modified/untracked files in compact form.
+
+git add index.html about.html
+    Stages the two HTML files for the next commit.
+
+git commit -m "message"
+    Records the staged changes as a commit with a message (used for every commit).
+
+git commit -am "message"
+    Stages all modified tracked files and commits them in one step.
+
+git diff --stat
+    Summarizes unstaged changes (files changed, lines added/removed).
+
+git branch feature
+    Creates a new branch named "feature" at the current commit.
+
+git switch feature
+    Switches the working directory to the feature branch.
+
+git switch main
+    Switches back to the main branch.
+
+git merge --no-ff feature
+    Merges feature into main, forcing a merge commit so the branch is visible in history.
+
+git log --oneline --graph --all --decorate
+    Displays the commit history as a compact graph, including branches.
+
+printf '*.log\ntemp/\n' > .gitignore
+    Creates .gitignore so Git ignores all .log files and the temp/ folder.
+
+git reset --hard HEAD~1
+    Undoes the last commit and discards its changes from the working directory.
+
+git reflog -3
+    Shows recent HEAD movements, proving the reset (and allowing recovery).
+
+gh repo create git-assignment --public --source=. --remote=origin
+    Creates a public GitHub repository and adds it as the "origin" remote.
+    (Equivalent manual way: create repo on github.com, then git remote add origin <url>)
+
+git remote -v
+    Lists configured remotes and their URLs.
+
+git push -u origin main
+    Pushes main to GitHub and sets it as the upstream branch.
+
+git push origin feature
+    Pushes the feature branch to GitHub so its history is visible there.
